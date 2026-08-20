@@ -39,3 +39,16 @@ PREDICT_ADDRESS=0x... npx hardhat run scripts/fund.ts
 
 Tests run entirely against mocks — `vm.etch` puts the mock runtime code at the canonical Ritual
 addresses — so no network access or funded account is needed.
+
+## Local Build Notes
+
+I forked the workshop repository and verified the project locally on Windows using Node.js, pnpm, and Hardhat.
+
+* Installed the project dependencies successfully.
+* Compiled the Solidity contracts successfully with solc 0.8.28.
+* Found that the starter repository still included an obsolete `Counter.ts` test while the `Counter` contract was no longer present.
+* Removed the obsolete Counter test and committed the fix to my fork.
+* Ran the available Hardhat test commands locally.
+* The current fork does not include the RitualPredict test files referenced in the README, so the Solidity test command currently reports 0 passing tests instead of the documented test count.
+
+This local debugging process helped me understand the project structure, Hardhat workflow, and the current state of the workshop starter repository.
